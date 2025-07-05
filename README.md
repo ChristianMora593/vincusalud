@@ -8,7 +8,7 @@ Aplicación web para la Facultad de Ciencias de la Salud orientada al control, s
 
 Se ha iniciado el proceso de prototipado de la aplicación web para la Facultad de Ciencias de la Salud, y se continúa manteniendo reuniones con la Dra. Gabriela Castillo, coordinadora de proyectos de Vinculación. Durante estas sesiones, se están realizando las modificaciones necesarias para asegurar que el sistema cumpla con todos los requerimientos por los cuales fue solicitado. Una vez definidos con claridad los lineamientos y funcionalidades, se procederá con el desarrollo del software como tal.
 
-<a href="https://www.figma.com/design/hbW2E7wOiCPJzaqRGRTWWi/Prototipado-Proyecto-de-Titulaci%C3%B3n-VincuSalud?node-id=0-1&t=jgqx8KYt8xwNHXAs-1" target="_blank">Enlace a Figma</a>
+<a href="https://www.figma.com/design/hbW2E7wOiCPJzaqRGRTWWi/Prototipado-Proyecto-de-Titulaci%C3%B3n-VincuSalud?node-id=0-1&t=jgqx8KYt8xwNHXAs-1" target="_blank">Enlace a Figma VincuSalud</a>
 
 ---
 
