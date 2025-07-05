@@ -38,7 +38,7 @@ Se eligieron herramientas modernas para garantizar escalabilidad, mantenibilidad
 
 ## Metodología de Desarrollo
 
-Se adoptó la metodología ágil SCRUM, organizada en sprints de 2 semanas, permitiendo mostrar avances continuos y construir el sistema de forma modular. La planificación se realizó con una tabla de sprints por módulo (login, dashboard, reportes, etc.) y tareas definidas por historia de usuario.
+Se adoptó la metodología ágil SCRUM, organizada en sprints de 3 semanas, permitiendo mostrar avances continuos y construir el sistema de forma modular. La planificación se realizó con una tabla de sprints por módulo (login, dashboard, reportes, etc.) y tareas definidas por historia de usuario.
 
 ---
 
