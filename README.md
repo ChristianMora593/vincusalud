@@ -100,6 +100,101 @@ El proyecto se divide en dos carpetas principales:
 
 ---
 
+## Arquitectura General
+
+VincuSalud se basa en una arquitectura por capas que separa responsabilidades para un mantenimiento eficiente:
+- <strong>Presentación (Frontend):</strong> Interfaz de usuario con React y Tailwind CSS
+- <strong>Lógica de negocio (Backend):</strong> API REST con Express y TypeScript
+- <strong>Acceso a datos (ORM):</strong> Prisma para comunicarse con la base de datos PostgreSQL
+- <strong>Persistencia:</strong> Base de datos PostgreSQL
+
+---
+
+## Configuración del Frontend (React + Tailwind + Vite)
+
+<pre><code># Desde la carpeta raíz
+cd frontend
+npm create vite@latest
+# Selecciona React + TypeScript
+cd vincusalud-frontend
+npm install
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p</code></pre>
+
+<p>Configura <code>tailwind.config.js</code>:</p>
+  <pre><code>content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]</code></pre>
+
+  <p>Agrega Tailwind en <code>src/index.css</code>:</p>
+  <pre><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
+
+---
+
+## Configuración del Backend (Express + TypeScript + Prisma)
+
+<pre><code>cd backend
+npm init -y
+npm install express cors dotenv jsonwebtoken bcryptjs prisma
+npm install -D typescript ts-node nodemon @types/node @types/express
+npx tsc --init
+npx prisma init</code></pre>
+
+<p>Archivo <code>src/index.ts</code>:</p>
+  <pre><code>import express from "express";
+import cors from "cors";
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.listen(3000, () => console.log("API corriendo en puerto 3000"));</code></pre>
+
+  <p>Archivo <code>prisma/schema.prisma</code>:</p>
+  <pre><code>model Usuario {
+  id        Int      @id @default(autoincrement())
+  nombre    String
+  correo    String   @unique
+  password  String
+}</code></pre>
+
+  <p>Compila la base de datos:</p>
+  <pre><code>npx prisma migrate dev --name init</code></pre>
+
+---
+
+## Conexión Frontend/Backend
+
+Desde el Frontend puedes hacer peticiones usando fetch o Axios:
+<pre><code>fetch("http://localhost:3000/api/login", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email, password })
+});</code></pre>
+
+---
+
+## Variables de Entorno
+
+<pre><code>// backend/.env
+DATABASE_URL="postgresql://user:password@localhost:5432/vincusalud"
+JWT_SECRET="supersecreto"</code></pre>
+
+---
+
+## Scripts Útiles
+
+<pre><code>// backend/package.json
+"scripts": {
+  "dev": "nodemon src/index.ts",
+  "build": "tsc"
+}</code></pre>
+  <pre><code>// frontend/package.json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build"
+}</code></pre>
+
+---
+
 ## Autor
 
 Nombre: Christian Mora  
