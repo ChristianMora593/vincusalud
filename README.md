@@ -200,4 +200,3 @@ JWT_SECRET="supersecreto"</code></pre>
 Nombre: Christian Mora  
 Proyecto: Tesis para la carrera de Ingeniería de Software  
 Facultad: Digital School
-Materia: Interacción Persona Computador IPC
